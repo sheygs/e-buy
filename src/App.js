@@ -5,6 +5,7 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 export default class App extends Component {
