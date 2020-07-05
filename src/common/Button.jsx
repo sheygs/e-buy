@@ -7,7 +7,7 @@ const Button = styled.button`
   background: transparent;
   padding: 0.25em 0.6em;
   margin: 0.2em 0.45em;
-  border: 0.2em solid var(--secondaryBlue);
+  border: 0.15em solid var(--secondaryBlue);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;

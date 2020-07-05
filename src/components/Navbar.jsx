@@ -32,7 +32,7 @@ const NavContainer = styled.nav`
   background-color: var(--primaryBlue);
   span {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .nav-link {
     color: var(--nearWhite) !important;

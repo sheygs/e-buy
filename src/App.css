@@ -25,6 +25,15 @@ body {
   font-weight: 700;
 }
 
+.text-price {
+  font-weight: 700;
+}
+
+.text-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
 .text-primary {
   color: var(--primaryBlue);
 }
