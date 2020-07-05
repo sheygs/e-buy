@@ -14,10 +14,12 @@ export default class App extends Component {
       <>
         <Navbar />
         <Switch>
-          <Route path="/details" component={Details} />
+          <Route path="/products" component={ProductList} />
           <Route path="/cart" component={Cart} />
-          <Route exact path="/" component={ProductList} />
+          <Route path="/details" component={Details} />
           <Route path="/not-found" component={NotFound} />
+          <Redirect from="/" exact to="/products" />
+          <Route exact path="/" component={ProductList} />
           <Redirect to="/not-found" />
         </Switch>
       </>
