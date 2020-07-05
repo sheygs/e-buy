@@ -145,7 +145,7 @@ export const products = [
   {
     id: 12,
     title: "Men's Ankle Corporate Shoe",
-    img: "images/product-11.jpg",
+    img: "images/product-12.jpg",
     price: 14500,
     size: "7, 8, 9, 10, 11, 12",
     "Sold By": "Elements of Harmony",
