@@ -1,19 +1,46 @@
 import React, { Component, createContext } from "react";
-import { products, detailProduct } from "./products";
+import { store, detailProduct } from "./fakeServices";
 const ProductContext = createContext();
 
 class ProductProvider extends Component {
   state = {
-    products,
+    products: [],
     detailProduct,
+    cart: [],
   };
 
-  handleProductDetail = () => {
-    console.log("handle detail");
+  componentDidMount() {
+    let products = [];
+    store.forEach((item) => {
+      products = [...products, { ...item }];
+    });
+    this.setState({ products });
+  }
+
+  getItem = (id) => {
+    const { products } = this.state;
+    return products.find((product) => product.id === id);
   };
 
-  addToCart = () => {
-    console.log("add to cart");
+  handleProductDetail = (id) => {
+    const detailProduct = this.getItem(id);
+    this.setState({ detailProduct });
+  };
+
+  addToCart = (id) => {
+    const products = [...this.state.products];
+    const index = products.findIndex((product) => product.id === id);
+    const product = products[index];
+    product.inCart = !product.inCart;
+    product.count = product.count + 1;
+    product.total = product.total + product.price;
+    this.setState(
+      {
+        products,
+        cart: [...this.state.cart, product],
+      },
+      () => console.log(this.state)
+    );
   };
 
   render() {
