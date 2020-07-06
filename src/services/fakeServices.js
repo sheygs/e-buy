@@ -1,14 +1,14 @@
 export const store = [
   {
     id: 1,
-    title: "360 Perforated Faux Leather Plump Shoe - Nude",
+    title: "360 Perforated Faux Leather Plump Shoe",
     img: "images/product-1.jpg",
     price: 5299,
     size: "5, 6, 7, 8, 9",
     seller: "Perfect Store",
     info:
       "Stand out from the crowd in this amazing and attractive high quality shoe. It is made with the buyer's comfort and elegance in mind. This is the shoe to go for whenever u are thinking of getting that perfect finishing touch for your outfit. It comes in different sizes. It is designed for comfort and uniqueness. Your cabinet would not be complete without this particular shoe in it. It is very durable and also highly affordable for both low income and high income earners. It speaks simplicity and uniqueness combined.",
-    inCart: true,
+    inCart: false,
     count: 0,
     total: 0,
   },
@@ -159,7 +159,7 @@ export const store = [
 
 export const detailProduct = {
   id: 10,
-  title: "Ladies High Heels Stiletto Shoe - Red",
+  title: "Ladies High Heels Stiletto Shoe",
   img: "images/product-10.jpg",
   price: 9800,
   size: "6, 7, 8",
