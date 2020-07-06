@@ -109,7 +109,7 @@ export const store = [
     img: "images/product-9.jpg",
     price: 14000,
     size: "13, 14, 15",
-    seller: "Natural Health Solution",
+    seller: "Konga",
     info:
       "Nothing beats the timeless appeal of our shoes, offering a distinct look that gets you attention. Jazz up your outfits and add sophistication to your look with this exquisite shoe that has been specially designed for that personality of class and style.Appearance is the best letter of recommendation. Spice up the attire with this elegant shoe made of finest and  quality material. The  attractive outlook of the shoe bring out the overall beauty in you. just rock and roll",
     inCart: false,
