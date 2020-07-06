@@ -8,7 +8,7 @@ const Size = ({ size }) => {
         {typeof size === "string" ? (
           size.split(",").map((el, i) => (
             <span
-              className="border border-dark mx-2 py-1 px-2 text-center"
+              className="border border-dark mx-1 py-1 px-2 text-center"
               key={i}
             >
               {el}
