@@ -25,7 +25,8 @@ body {
   font-weight: 700;
 }
 
-.text-price {
+.text-price,
+.text-weight {
   font-weight: 700;
 }
 
@@ -34,7 +35,7 @@ body {
   font-size: 1.1rem;
 }
 
-.text-primary {
+.text-blue {
   color: var(--primaryBlue);
 }
 
