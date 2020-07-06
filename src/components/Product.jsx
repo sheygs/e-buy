@@ -9,25 +9,31 @@ const Product = ({ product: { id, title, img, price, inCart } }) => {
   return (
     <ProductContainer className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
-        <div
-          className="image-container p-5"
-          onClick={() => console.log(id, title)}
-        >
-          <Link to="/details">
-            <img src={img} alt={title} className="card-image-top" />
-          </Link>
-          <button
-            className="cart-btn"
-            disabled={inCart}
-            onClick={() => console.log("added to cart")}
-          >
-            {inCart ? (
-              <span className="text-capitalize mb-0">in cart</span>
-            ) : (
-              <i className="fa fa-shopping-cart" aria-hidden="true" />
-            )}
-          </button>
-        </div>
+        <ProductConsumer>
+          {({ handleProductDetail, addToCart }) => {
+            return (
+              <div
+                className="image-container p-5"
+                onClick={() => handleProductDetail(id)}
+              >
+                <Link to="/details">
+                  <img src={img} alt={title} className="card-image-top" />
+                </Link>
+                <button
+                  className="cart-btn"
+                  disabled={inCart}
+                  onClick={() => addToCart(id)}
+                >
+                  {inCart ? (
+                    <span className="text-capitalize mb-0">in cart</span>
+                  ) : (
+                    <i className="fa fa-shopping-cart" aria-hidden="true" />
+                  )}
+                </button>
+              </div>
+            );
+          }}
+        </ProductConsumer>
         <div className="card-info d-flex justify-content-between mx-2 border-top py-2">
           <p className="text-title align-self-center mb-0">{truncate(title)}</p>
           <span className="text-price align-self-center mb-0">
