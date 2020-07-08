@@ -42,3 +42,23 @@ body {
 .text-secondary {
   color: var(--secondaryBlue);
 }
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 1rem !important;
+  color: var(--bgDark);
+  border-radius: none;
+  border: 0.5px solid var(--bgDark);
+}
+
+.btn-black:hover {
+  background-color: var(--bgDark) !important;
+  color: var(--nearWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--bgYellow);
+}
