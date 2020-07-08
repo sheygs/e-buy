@@ -31,7 +31,7 @@ export const store = [
     img: "images/product-3.jpg",
     price: 10000,
     size: 10,
-    seller: "Borets Resources Limited",
+    seller: "Borets Resources Ltd",
     info:
       "Borets safety shoe has been a market leader in the industry through its quality maintenance. Very strong that it can sustain the pressure of different whether. It can easily be adjusted to fit the user. Has high durability standard, very easy to wear, not heavy on the foot, available in different sizes, has well coupled rope and pendants for adjustment.",
     inCart: false,

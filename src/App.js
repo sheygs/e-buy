@@ -5,6 +5,7 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
+import Modal from "./common/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -22,6 +23,7 @@ export default class App extends Component {
           <Route exact path="/" component={ProductList} />
           <Redirect to="/not-found" />
         </Switch>
+        <Modal />
       </>
     );
   }
