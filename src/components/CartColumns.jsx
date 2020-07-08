@@ -16,7 +16,7 @@ export default class CartColumns extends Component {
         <div className="row">
           {columns.map((column) => (
             <div key={column.id} className="col-10 mx-auto col-lg-2">
-              <p className="text-uppercase">{column.title}</p>
+              <p className="text-uppercase text-title">{column.title}</p>
             </div>
           ))}
         </div>
