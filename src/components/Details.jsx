@@ -9,7 +9,7 @@ export default class Details extends Component {
   render() {
     return (
       <ProductConsumer>
-        {({ detailProduct, addToCart }) => {
+        {({ detailProduct, addToCart, openModal }) => {
           const {
             id,
             title,
@@ -55,13 +55,16 @@ export default class Details extends Component {
                   </p>
                   <div className="action-btns">
                     <Link to="/">
-                      <Button>Products</Button>
+                      <Button>Menu</Button>
                     </Link>
                     <Link to="/cart">
                       <Button
                         inCart
                         disabled={inCart}
-                        onClick={() => addToCart(id)}
+                        onClick={() => {
+                          addToCart(id);
+                          openModal(id);
+                        }}
                       >
                         {inCart ? "inCart" : "Add To Cart"}
                       </Button>
