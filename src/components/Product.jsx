@@ -10,7 +10,7 @@ const Product = ({ product: { id, title, img, price, inCart } }) => {
     <ProductContainer className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
         <ProductConsumer>
-          {({ handleProductDetail, addToCart }) => {
+          {({ handleProductDetail, addToCart, openModal }) => {
             return (
               <div
                 className="image-container p-5"
@@ -22,7 +22,10 @@ const Product = ({ product: { id, title, img, price, inCart } }) => {
                 <button
                   className="cart-btn"
                   disabled={inCart}
-                  onClick={() => addToCart(id)}
+                  onClick={() => {
+                    addToCart(id);
+                    openModal(id);
+                  }}
                 >
                   {inCart ? (
                     <span className="text-capitalize mb-0">in cart</span>
