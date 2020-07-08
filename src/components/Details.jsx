@@ -23,7 +23,7 @@ export default class Details extends Component {
           return (
             <div className="container py-3">
               <div className="row">
-                <div className="col-10 mx-auto  my-3">
+                <div className="col-10 mx-auto my-3">
                   <h2 className="text-center main-title text-capitalize">
                     Product Detail
                   </h2>
@@ -63,7 +63,6 @@ export default class Details extends Component {
                         disabled={inCart}
                         onClick={() => {
                           addToCart(id);
-                          openModal(id);
                         }}
                       >
                         {inCart ? "inCart" : "Add To Cart"}
