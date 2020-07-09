@@ -40,7 +40,7 @@ const CartItem = ({
       </div>
       <div className="col-10 mx-auto col-lg-2">
         <span className="d-lg-none">total: </span>
-        &#x20A6; {formatPrice(price)}
+        &#x20A6; {formatPrice(total)}
       </div>
     </div>
   );
