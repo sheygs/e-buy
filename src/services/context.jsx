@@ -39,10 +39,13 @@ class ProductProvider extends Component {
     product.inCart = !product.inCart;
     product.count = product.count + 1;
     product.total = product.total + product.price;
-    this.setState({
-      products,
-      cart: [...this.state.cart, product],
-    });
+    this.setState(
+      {
+        products,
+        cart: [...this.state.cart, product],
+      },
+      () => this.computeTotal()
+    );
   };
 
   openModal = (id) => {
@@ -63,7 +66,7 @@ class ProductProvider extends Component {
     console.log("Increment id" + id);
   };
   decrement = (id) => {
-    console.log("Increment id" + id);
+    console.log("decrement id" + id);
   };
 
   removeItem = (id) => {
@@ -71,11 +74,34 @@ class ProductProvider extends Component {
   };
 
   clearCart = () => {
-    console.log("Cart cleared");
+    this.setState({ cart: [] });
+  };
+
+  computeTotal = () => {
+    let subTotal = 0;
+    this.state.cart.forEach((item) => {
+      subTotal += item.total;
+    });
+    const tax = Math.round(parseFloat((subTotal * 0.05).toFixed(2)));
+    const total = subTotal + tax;
+    this.setState({
+      subTotal,
+      tax,
+      total,
+    });
   };
 
   render() {
-    const { products, detailProduct, isModalOpen, modalProduct } = this.state;
+    const {
+      cart,
+      subTotal,
+      tax,
+      total,
+      products,
+      detailProduct,
+      isModalOpen,
+      modalProduct,
+    } = this.state;
     return (
       <ProductContext.Provider
         value={{
@@ -87,6 +113,10 @@ class ProductProvider extends Component {
           modalProduct,
           openModal: this.openModal,
           closeModal: this.closeModal,
+          cart,
+          subTotal,
+          tax,
+          total,
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
