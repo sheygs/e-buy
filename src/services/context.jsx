@@ -73,8 +73,19 @@ class ProductProvider extends Component {
     console.log("Item id" + id + " removed");
   };
 
+  // clears the cart
+  // loads a fresh copy of the store
+  // sets the subtotal, tax and total to zero
   clearCart = () => {
-    this.setState({ cart: [] });
+    this.setState(
+      {
+        cart: [],
+      },
+      () => {
+        this.componentDidMount();
+        this.computeTotal();
+      }
+    );
   };
 
   computeTotal = () => {
