@@ -75,9 +75,16 @@ class ProductProvider extends Component {
     const cart = [...this.state.cart];
     const index = cart.findIndex((el) => el.id === id);
     const cartItem = cart[index];
-    cartItem.count > 1 && cartItem.count--;
-    cartItem.total = cartItem.count * cartItem.price;
-    this.setState({ cart }, () => this.computeTotal());
+    const { count } = cartItem;
+    switch (count) {
+      case 0:
+        this.removeItem(id);
+        break;
+      default:
+        cartItem.count--;
+        cartItem.total = cartItem.count * cartItem.price;
+        this.setState({ cart }, () => this.computeTotal());
+    }
   };
 
   removeItem = (id) => {
