@@ -6,7 +6,8 @@ import CartList from "./CartList";
 import CartTotals from "./CartTotals";
 import { ProductConsumer } from "../services/context";
 
-const Cart = () => {
+const Cart = ({ history }) => {
+  console.log(history);
   return (
     <section>
       <ProductConsumer>
@@ -19,7 +20,7 @@ const Cart = () => {
               <Title title="Your Cart" />
               <CartColumns />
               <CartList value={value} />
-              <CartTotals value={value} />
+              <CartTotals history={history} value={value} />
             </>
           );
         }}

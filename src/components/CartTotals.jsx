@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../utils/helpers";
+import PayPalButton from "../common/PayPalButton";
 
-const CartTotals = ({ value: { subTotal, tax, total, clearCart } }) => {
+const CartTotals = ({
+  value: { subTotal, tax, total, clearCart },
+  history,
+}) => {
   return (
     <>
       <div className="container">
@@ -29,6 +33,11 @@ const CartTotals = ({ value: { subTotal, tax, total, clearCart } }) => {
               <span className="text-title">total: </span>
               <strong>&#x20A6; {formatPrice(total)}</strong>
             </h5>
+            <PayPalButton
+              total={total}
+              clearCart={clearCart}
+              history={history}
+            />
           </div>
         </div>
       </div>
