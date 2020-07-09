@@ -70,7 +70,15 @@ class ProductProvider extends Component {
   };
 
   removeItem = (id) => {
-    console.log("Item id" + id + " removed");
+    const products = [...this.state.products];
+    const cart = [...this.state.cart];
+    const newCart = cart.filter((item) => item.id !== id);
+    const product = this.getItem(id);
+    const index = products.indexOf(product);
+    products[index].inCart = false;
+    products[index].count = 0;
+    products[index].total = 0;
+    this.setState({ cart: newCart, products }, () => this.computeTotal());
   };
 
   // clears the cart
