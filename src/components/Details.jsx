@@ -30,10 +30,10 @@ export default class Details extends Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-10 mx-auto col-md-6 my-3">
+                <div className="col-8 mx-auto col-md-6 my-3">
                   <img src={img} className="img-fluid" alt={title} />
                 </div>
-                <div className="col-10 mx-auto col-md-6 my-2">
+                <div className="col-8 mx-auto col-md-6 my-2">
                   <h2>{title}</h2>
                   <h4 className="main-title text-uppercase text-muted my-2">
                     seller: <span className="text-uppercase">{seller}</span>
@@ -57,12 +57,13 @@ export default class Details extends Component {
                     <Link to="/">
                       <Button>Menu</Button>
                     </Link>
-                    <Link to="/cart">
+                    <Link to="#">
                       <Button
                         inCart
                         disabled={inCart}
                         onClick={() => {
                           addToCart(id);
+                          openModal(id);
                         }}
                       >
                         {inCart ? "inCart" : "Add To Cart"}
