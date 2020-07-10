@@ -21,8 +21,8 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 385px) {
-    margin: 0 auto !important;
-    border: 0;
+    margin: 0.25rem auto !important;
+    border-width: 1px;
     border-radius: 0;
 
     & sub {
