@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <NavContainer className="navbar navbar-expand-sm navbar-dark px-sm-5">
       <Link style={{ textDecoration: "none" }} to="/">
-        <span className="navbar-brand mb-0 h1">e-buy</span>
+        <span className="navbar-brand mb-0 h1">eBuy</span>
       </Link>
       <ul className="navbar-nav align-items-center">
         <li className="nav-item ml-5">
