@@ -4,13 +4,16 @@ const Select = ({ size }) => {
   return (
     <h4 className="text-blue my-3">
       <strong>
-        <span>sizes:</span>
+        <span>sizes: </span>
         {typeof size === "string" ? (
           <select
-            style={{ maxWidth: "50%", fontSize: "1rem" }}
-            class="custom-select custom-select-sm mb-2"
+            style={{
+              maxWidth: "50%",
+              fontSize: "1rem",
+            }}
+            className="custom-select custom-select-sm mb-2"
           >
-            <option selected>Select Size</option>
+            <option value="">--select--</option>
             {size.split(",").map((el, i) => (
               <option key={i} value={el}>
                 {el}
