@@ -7,7 +7,6 @@ import CartTotals from "./CartTotals";
 import { ProductConsumer } from "../services/context";
 
 const Cart = ({ history }) => {
-  console.log(history);
   return (
     <section>
       <ProductConsumer>

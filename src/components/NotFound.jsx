@@ -1,7 +1,6 @@
 import React from "react";
 
 const NotFound = ({ location }) => {
-  console.log(location);
   return (
     <div className="container">
       <div className="row">
