@@ -7,8 +7,8 @@ const Button = styled.button`
     props.inCart ? "var(--bgYellow)" : "var(--secondaryBlue)"};
   background: transparent;
   padding: 0.25em 0.6em;
-  margin: 0.2em 0.45em;
-  border: 0.15em solid var(--secondaryBlue);
+  margin: 0.15em 0.4em;
+  border: 3px solid var(--secondaryBlue);
   border-color: ${(props) =>
     props.inCart ? "var(--bgYellow)" : "var(--secondaryBlue)"};
   border-radius: 8px;
@@ -18,6 +18,16 @@ const Button = styled.button`
     color: var(--primaryBlue);
     background-color: ${(props) =>
       props.inCart ? "var(--bgYellow)" : "var(--secondaryBlue)"};
+  }
+
+  @media screen and (max-width: 385px) {
+    margin: 0 auto !important;
+    border: 0;
+    border-radius: 0;
+
+    & sub {
+      display: none;
+    }
   }
 `;
 
