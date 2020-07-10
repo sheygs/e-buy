@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Size from "../common/Size";
+import Select from "../common/Select";
 import { ProductConsumer } from "../services/context";
 import { Link } from "react-router-dom";
 import Button from "../common/Button";
@@ -43,7 +43,7 @@ export default class Details extends Component {
                       price: &#x20A6;<span>{formatPrice(price)}</span>
                     </strong>
                   </h4>
-                  <Size size={size} />
+                  <Select size={size} />
                   <p className="text-title text-capitalize font-weight-bold mt-3 mb-0">
                     product description:
                   </p>
